@@ -19,10 +19,17 @@ jobs:
           with:
             fetch-depth: 0
 
-        - name: Build Version Number
-          uses: ag10717/example-action@v2.2
+        # - name: Build Version Number
+        #   uses: ag10717/example-action@v2.2
 
-        - name: Create Tag
-          uses: ag10717/example-action@v2.2
+        # - name: Create Tag
+        #   uses: ag10717/example-action@v2.2
+        #   with:
+        #     create_tag: true
+
+        - name: Build App Config
+          uses: ag10717/configure-app-settings@v1
           with:
-            create_tag: true
+            region_name: "westus"
+            environemnt_name: "dev"
+            keyvault_name_suffix: "myKeyVault"

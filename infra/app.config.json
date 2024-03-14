@@ -1,0 +1,18 @@
+{
+    "keyVaultRef": {
+        "AppSettings__ApimApiKey": "[KEYVAULT-REFERENCE-PLACEHOLDER]",
+        "AzureAppConfigurationConnectionString": "[KEYVAULT-REFERENCE-PLACEHOLDER]"
+    },    
+    "common": {
+        "AppSettings__UseRedisCache": true,
+        "AppSettings__MaxAttempts": "3"
+    },
+    "dev": {
+        "AppSettings__UseRedisCache": false,
+        "AppSettings__MaxAttempts": "10"
+    },
+    "test": {
+        "AppSettings__UseRedisCache": true,
+        "AppSettings__MaxAttempts": "55"
+    }
+}
