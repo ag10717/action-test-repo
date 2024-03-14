@@ -33,3 +33,9 @@ jobs:
             region_name: "westus"
             environment_name: "dev"
             keyvault_name_suffix: "myKeyVault"
+
+        - name: Check Contents
+          shell: bash
+          run: |
+            ls -la
+            cat ./infra/appsettings.json
