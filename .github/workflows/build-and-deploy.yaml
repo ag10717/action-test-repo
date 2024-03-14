@@ -31,5 +31,5 @@ jobs:
           uses: ag10717/configure-app-settings@v1
           with:
             region_name: "westus"
-            environemnt_name: "dev"
+            environment_name: "dev"
             keyvault_name_suffix: "myKeyVault"
