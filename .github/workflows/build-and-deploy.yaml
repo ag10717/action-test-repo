@@ -25,6 +25,10 @@ jobs:
       name: 🏗️ Build and 🧪 Test
       runs-on: ubuntu-latest
       steps:
+        - name: 👩‍💻 Checkout Codebase
+          uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
 
         - name: Build Version Number
           uses: ag10717/example-action@v2.2
