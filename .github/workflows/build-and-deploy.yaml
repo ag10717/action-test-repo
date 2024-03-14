@@ -1,0 +1,35 @@
+name: Build and Deploy
+on:
+  workflow_dispatch:
+    inputs:
+      skip_tests:
+        description: 'Skip tests'
+        default: false
+        type: boolean
+
+env:
+  FA_NAME_SUFFIX: 'map'
+  KEYVAULT_NAME_SUFFIX: 'map'
+  RG_NAME_SUFFIX: 'MAKEAPAYMENT'
+  APIM_SUB_KEY_NAME: 'RACIMakeAPaymentApiUser_raci-make-a-payment-backend'
+  FUNC_APP_PROJECT_PATH: 'src/Raci.MakeAPayment.BFF'
+  DOTNET_VERSION: '8.0.200'
+
+permissions:
+  contents: write
+  id-token: write # Required for the azure login action
+  checks: write # Required for test-reporter action
+
+jobs:
+  build-and-test:
+    name: 🏗️ Build and 🧪 Test
+      runs-on: ubuntu-latest
+      steps:
+
+        - name: Build Version Number
+          uses: ag10717/example-action@v2.2
+
+        - name: Create Tag
+          uses: actions/example-action@v2.2
+          with:
+            create_tag: true
