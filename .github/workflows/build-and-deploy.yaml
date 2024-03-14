@@ -30,6 +30,6 @@ jobs:
           uses: ag10717/example-action@v2.2
 
         - name: Create Tag
-          uses: actions/example-action@v2.2
+          uses: ag10717/example-action@v2.2
           with:
             create_tag: true
